@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QR_Converter.Pages.Converter"
+             NavigationPage.HasBackButton="True"
+             BackgroundColor="White">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Export" Clicked="BtnExpo"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5, 0.05"
+                         Orientation="Horizontal" Spacing="5">
+                <Label Text="Copie o código OU " FontSize="Medium" HorizontalOptions="Start" VerticalTextAlignment="Center"/>
+                <Button Text="SCAN" BackgroundColor="Gray" BorderColor="Black" CornerRadius="10"
+                    Clicked="BtnGoToScan" HorizontalOptions="End"/>
+            </StackLayout>
+            <Editor AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.1, 0.15, 1, 0.2"
+                    HorizontalOptions="FillAndExpand" x:Name="Ent_Code"/>
+            <Button AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.1, 0.38, 1, 0.1"
+                    Text="Convert Text" BackgroundColor="LightBlue" BorderColor="Black"
+                    CornerRadius="10" Clicked="BtnConvert"/>
+            <Editor AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.1, 0.8, 1, 0.4"
+                    HorizontalOptions="FillAndExpand" x:Name="Ent_Conv"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
